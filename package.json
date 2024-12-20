@@ -1,7 +1,7 @@
 {
   "name": "calculator",
   "version": "1.0.0",
-  "main": "src/index.html",
+  "main": "docs/index.html",
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "eslint": "^9.17.0",
@@ -10,9 +10,9 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "dev": "npx tailwindcss -i ./docs/input.css -o ./docs/output.css --watch",
+    "lint": "eslint docs",
+    "lint:fix": "eslint docs --fix"
   },
   "keywords": [],
   "author": "",
