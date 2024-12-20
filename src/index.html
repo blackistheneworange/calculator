@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container font-mono mx-auto w-full lg:w-2/3 md:w-4/5 my-3">
+        <div class="border-2 rounded shadow p-3">
+            <div class="flex justify-around items-center">
+                <div class="relative w-11/12 border-1 shadow flex justify-end" style="cursor:text;" id="display_screen">
+                    <span class="absolute px-3 text-base font-mono text-gray-500"></span>
+                    <div class="text-2xl pt-6 pb-2 px-3">
+                        <div contenteditable="true" class="input outline-0"></div>
+                        <span class="placeholder absolute right-2 bottom-2 text-gray-400">Enter input...</span>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <button id="prev_history" class="bg-cyan-300 hover:bg-cyan-400 p-2 border border-black disabled:bg-cyan-200 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                        </svg>                          
+                    </button>
+                    <button id="next_history" class="bg-cyan-300 hover:bg-cyan-400 p-2 border border-black disabled:bg-cyan-200 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                        </svg>                          
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mt-3">
+                <div id="number_buttons"></div>
+                <div id="math_operation_buttons"></div>
+                <div id="other_operation_buttons"></div>
+            </div>
+        </div>
+
+        <a href="https://github.com/blackistheneworange/calculator" class="mt-2 flex justify-end mr-2">
+            <img src="./assets/github.svg" alt="github repository"  class="w-8 h-8"/>
+        </a>
+    </div>
+
+    <script src="./scripts/main.js" type="module"></script>
+</body>
+</html>
