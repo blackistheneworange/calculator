@@ -1,6 +1,6 @@
 import ActionCenter from "./action_center.class.js";
 import appConfig from "./config.js";
-import { AC_KEY, EMPTY_INPUT } from "./constants.js";
+import { AC_KEY, DECIMAL_POINT, EMPTY_INPUT } from "./constants.js";
 import DisplayScreen from "./display_screen.class.js";
 
 import isClearOperator from "./helpers/is-clear-operator.js";
@@ -100,6 +100,7 @@ class Calculator {
             });
             this.curr_history_index = this.history.length-1;
             this.prev_input = this.input;
+            if(value.includes(DECIMAL_POINT)) this.has_decimal_point = true;
         }
         else if(operation === AC_KEY){
             this.history = [];

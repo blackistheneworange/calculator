@@ -2,8 +2,6 @@ import { INVALID_INPUT, MULTIPLY_OPERATOR } from "../constants.js";
 import computeMathOperation from "../utils/math_operations.js";
 
 const evaluateFinalExpression = (expressions) => {
-    console.log(expressions);
-    
     const stack = [], closest_openbracket=[];
 
     for(const {num, operator, openbracket, closebracket} of expressions){
